@@ -36,8 +36,8 @@ h3, i {
 
 .pageImage {
   position: absolute;
-  left: -70px;
-  bottom: -70px;
+  left: -20px;
+  bottom: -20px;
   width: 300px;
   max-width: 50%;
 }
