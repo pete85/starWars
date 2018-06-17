@@ -18,7 +18,27 @@ export class StarwarsService {
 
   constructor(private _http: HttpClient) { }
 
+  getFilms() {
+    return this._http.get(this.ROOT_URL + '/films');
+  }
+
   getPeople() {
     return this._http.get(this.ROOT_URL + '/people');
+  }
+
+  getPlanets() {
+    return this._http.get(this.ROOT_URL + '/planets');
+  }
+
+  getSpecies() {
+    return this._http.get(this.ROOT_URL + '/species');
+  }
+
+  getStarships() {
+    return this._http.get(this.ROOT_URL + '/starships');
+  }
+
+  getVehicles() {
+    return this._http.get(this.ROOT_URL + '/vehicles');
   }
 }

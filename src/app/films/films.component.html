@@ -1,3 +1,48 @@
 <app-navbar></app-navbar>
 
+<div *ngIf="films">
+
+  <!--HEADERS-->
+
+  <mat-list class="listHeader">
+    <div fxLayout="row">
+      <mat-list-item fxFlex="fill">
+        <p class="column-header-text" mat-line>Title</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="column-header-text" mat-line>Director</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="column-header-text" mat-line>Producer</p>
+      </mat-list-item>
+
+    </div>
+  </mat-list>
+
+  <!--HEADERS END-->
+
+  <mat-list
+    *ngFor="let film of films; let i = index"
+    [attr.data-index]="i">
+
+    <div fxLayout="row">
+      <mat-list-item fxFlex="fill">
+        <p class="desco-list-text" mat-line>{{film.title}}</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="desco-list-text" mat-line>{{film.director}}</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="desco-list-text" mat-line>{{film.producer}}</p>
+      </mat-list-item>
+    </div>
+
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
+
 <img class="pageImage" src="../../assets/images/r2d2.png" alt="">

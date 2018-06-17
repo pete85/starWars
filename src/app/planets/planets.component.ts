@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsComponent implements OnInit {
 
+  pageName = 'Planets';
+  planets = [];
+
   constructor() { }
 
   ngOnInit() {
+    document.getElementById('pageName').innerHTML = this.pageName;
+    this.planets = JSON.parse(localStorage.getItem('planets'));
   }
 
 }

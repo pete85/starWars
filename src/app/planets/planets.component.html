@@ -1,7 +1,50 @@
 <app-navbar></app-navbar>
 
-<div class="centeredContent">
-  <h1 class="txtStar">Planets</h1>
+
+<div *ngIf="planets">
+
+  <!--HEADERS-->
+
+  <mat-list class="listHeader">
+    <div fxLayout="row">
+      <mat-list-item fxFlex="fill">
+        <p class="column-header-text" mat-line>Name</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="column-header-text" mat-line>Climate</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="column-header-text" mat-line>Population</p>
+      </mat-list-item>
+
+    </div>
+  </mat-list>
+
+  <!--HEADERS END-->
+
+  <mat-list
+    *ngFor="let planet of planets; let i = index"
+    [attr.data-index]="i">
+
+    <div fxLayout="row">
+      <mat-list-item fxFlex="fill">
+        <p class="desco-list-text" mat-line>{{planet.name}}</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="desco-list-text" mat-line>{{planet.climate}}</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="desco-list-text" mat-line>{{planet.population}}</p>
+      </mat-list-item>
+    </div>
+
+    <mat-divider></mat-divider>
+  </mat-list>
 </div>
+
 
 <img class="pageImage" src="../../assets/images/planet.png" alt="">

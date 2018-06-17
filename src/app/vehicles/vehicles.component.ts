@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehiclesComponent implements OnInit {
 
+  pageName = 'Vehicles';
+
   constructor() { }
 
   ngOnInit() {
+    document.getElementById('pageName').innerHTML = this.pageName;
   }
 
 }

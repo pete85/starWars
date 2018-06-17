@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarshipsComponent implements OnInit {
 
+  pageName = 'Starships';
+
   constructor() { }
 
   ngOnInit() {
+    document.getElementById('pageName').innerHTML = this.pageName;
   }
 
 }
