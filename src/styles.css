@@ -20,9 +20,19 @@ h3, i {
 }
 
 .centeredContent {
+  padding: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.centeredContent img {
+  cursor: pointer;
+  max-width: 90%;
+}
+
+.centeredContent img:hover {
+  opacity: 0.4;
 }
 
 .h100 {
@@ -42,6 +52,12 @@ h3, i {
   bottom: 0;
   width: 300px;
   max-width: 50%;
+}
+
+.clearButton {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
 }
 
 .listHeader {

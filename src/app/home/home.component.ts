@@ -8,6 +8,7 @@ import {Starship} from '../_models/starship';
 import {Vehicle} from '../_models/vehicle';
 import {Observable} from 'rxjs/index';
 import {MatSnackBar} from '@angular/material';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +27,8 @@ export class HomeComponent implements OnInit {
   pageName = 'Home';
 
   constructor(private _starwarsService: StarwarsService,
-              public snackBar: MatSnackBar) {
+              public snackBar: MatSnackBar,
+              private _router: Router) {
   }
 
   ngOnInit() {
@@ -157,6 +159,39 @@ export class HomeComponent implements OnInit {
         () => {
           console.log('finished retrieving data');
         });
+  }
+
+  openFilms(): void {
+    this._router.navigateByUrl('/films');
+  }
+
+  openPeople(): void {
+    this._router.navigateByUrl('/people');
+  }
+
+  openPlanets(): void {
+    this._router.navigateByUrl('/planets');
+  }
+
+  openSpecies(): void {
+    this._router.navigateByUrl('/species');
+  }
+
+  openStarships(): void {
+    this._router.navigateByUrl('/starships');
+  }
+
+  openVehicles(): void {
+    this._router.navigateByUrl('/vehicles');
+  }
+
+  clearData(): void {
+    localStorage.removeItem('films');
+    localStorage.removeItem('people');
+    localStorage.removeItem('planets');
+    localStorage.removeItem('species');
+    localStorage.removeItem('starships');
+    localStorage.removeItem('vehicles');
   }
 
   private showAlert(message) {
