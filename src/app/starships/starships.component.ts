@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class StarshipsComponent implements OnInit {
 
   pageName = 'Starships';
+  starships = [];
 
   constructor() { }
 
   ngOnInit() {
     document.getElementById('pageName').innerHTML = this.pageName;
+    this.starships = JSON.parse(localStorage.getItem('starships'));
   }
 
 }

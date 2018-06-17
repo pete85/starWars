@@ -1,3 +1,50 @@
 <app-navbar></app-navbar>
 
+
+<div *ngIf="species">
+
+  <!--HEADERS-->
+
+  <mat-list class="listHeader">
+    <div fxLayout="row">
+      <mat-list-item fxFlex="fill">
+        <p class="column-header-text" mat-line>Name</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="column-header-text" mat-line>Classification</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="column-header-text" mat-line>Designation</p>
+      </mat-list-item>
+
+    </div>
+  </mat-list>
+
+  <!--HEADERS END-->
+
+  <mat-list
+    *ngFor="let alien of species; let i = index"
+    [attr.data-index]="i">
+
+    <div fxLayout="row">
+      <mat-list-item fxFlex="fill">
+        <p class="desco-list-text" mat-line>{{alien.name}}</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="desco-list-text" mat-line>{{alien.classification}}</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="desco-list-text" mat-line>{{alien.designation}}</p>
+      </mat-list-item>
+    </div>
+
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
+
+
 <img class="pageImage" src="../../assets/images/species.png" alt="">

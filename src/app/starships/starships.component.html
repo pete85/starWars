@@ -1,3 +1,50 @@
 <app-navbar></app-navbar>
 
+
+<div *ngIf="starships">
+
+  <!--HEADERS-->
+
+  <mat-list class="listHeader">
+    <div fxLayout="row">
+      <mat-list-item fxFlex="fill">
+        <p class="column-header-text" mat-line>Name</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="column-header-text" mat-line>Model</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="column-header-text" mat-line>Class</p>
+      </mat-list-item>
+
+    </div>
+  </mat-list>
+
+  <!--HEADERS END-->
+
+  <mat-list
+    *ngFor="let ship of starships; let i = index"
+    [attr.data-index]="i">
+
+    <div fxLayout="row">
+      <mat-list-item fxFlex="fill">
+        <p class="desco-list-text" mat-line>{{ship.name}}</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="desco-list-text" mat-line>{{ship.model}}</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="33%">
+        <p class="desco-list-text" mat-line>{{ship.starship_class}}</p>
+      </mat-list-item>
+    </div>
+
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
+
+
 <img class="pageImage" src="../../assets/images/starship_2.png" alt="">
