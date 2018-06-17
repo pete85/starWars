@@ -1,5 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {routing} from './app.routing';
+import {
+  MatSidenavModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatIconModule,
+  MatTabsModule,
+  MatCardModule,
+  MatListModule,
+  MatCheckboxModule,
+  MatExpansionModule,
+  MatRadioModule,
+  MatInputModule,
+  MatDialogModule,
+  MatSnackBarModule,
+  MatProgressSpinnerModule,
+  MatProgressBarModule,
+  MatMenuModule,
+  MatGridListModule,
+  MatChipsModule,
+  MatSelectModule,
+  MatDatepickerModule,
+  MatTooltipModule,
+  MatNativeDateModule,
+  MatAutocompleteModule,
+  MatSlideToggleModule,
+  MatFormFieldModule,
+  MatPaginatorModule,
+  MatSliderModule,
+  MatStepperModule
+
+} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -9,6 +43,7 @@ import { StarshipsComponent } from './starships/starships.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { SpeciesComponent } from './species/species.component';
 import { PlanetsComponent } from './planets/planets.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,19 +54,80 @@ import { PlanetsComponent } from './planets/planets.component';
     StarshipsComponent,
     VehiclesComponent,
     SpeciesComponent,
-    PlanetsComponent
+    PlanetsComponent,
+    NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTabsModule,
+    MatCardModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatExpansionModule,
+    MatRadioModule,
+    MatInputModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatMenuModule,
+    MatGridListModule,
+    MatChipsModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatAutocompleteModule,
+    MatSlideToggleModule,
+    MatTooltipModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatSliderModule,
+    FlexLayoutModule
   ],
   exports: [
+    BrowserAnimationsModule,
     HomeComponent,
     FilmsComponent,
     PeopleComponent,
     StarshipsComponent,
     VehiclesComponent,
     SpeciesComponent,
-    PlanetsComponent
+    PlanetsComponent,
+    NavbarComponent,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTabsModule,
+    MatCardModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatExpansionModule,
+    MatRadioModule,
+    MatInputModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatMenuModule,
+    MatGridListModule,
+    MatChipsModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatAutocompleteModule,
+    MatSlideToggleModule,
+    MatTooltipModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatSliderModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

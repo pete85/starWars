@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./theme.css";
+
+@font-face {
+  font-family: 'JediOut';
+  src: url('./assets/fonts/starjout/Starjout.ttf');
+}
+
+body {
+  margin: 0;
+}
+
+h3, i {
+  line-height: 58px !important;
+}
+
+.txtStar {
+  font-size: 3em;
+  font-family: 'JediOut', 'Georgia', serif;
+}
+
+.centeredContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h100 {
+  height: 100%;
+}
+
+#logoImage {
+  margin-top: 7px;
+  max-height: 50px;
+}
+
+.pageImage {
+  position: absolute;
+  left: -70px;
+  bottom: -70px;
+  width: 300px;
+  max-width: 50%;
+}

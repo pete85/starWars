@@ -1,0 +1,22 @@
+<mat-toolbar class="container"
+             fxLayout
+             fxLayout.xs="column"
+             fxLayoutAlign="start"
+             fxLayoutGap="10px"
+             fxLayoutGap.xs="0">
+  <img id="logoImage" src="../../assets/images/starwars2.png" alt="">
+    <span fxFlex="fill"></span>
+
+
+  <button mat-button [matMenuTriggerFor]="menu">
+    <i class="material-icons">menu</i>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openHome()">Home</button>
+    <button mat-menu-item (click)="openPeople()">People</button>
+    <button mat-menu-item (click)="openPlanets()">Planets</button>
+    <button mat-menu-item (click)="openSpecies()">Species</button>
+    <button mat-menu-item (click)="openStarships()">Starships</button>
+    <button mat-menu-item (click)="openVehicles()">Vehicles</button>
+  </mat-menu>
+</mat-toolbar>
