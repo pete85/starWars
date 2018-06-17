@@ -17,6 +17,10 @@ export class NavbarComponent implements OnInit {
     this._router.navigateByUrl('');
   }
 
+  openFilms(): void {
+    this._router.navigateByUrl('/films');
+  }
+
   openPeople(): void {
     this._router.navigateByUrl('/people');
   }

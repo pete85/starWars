@@ -1,3 +1,48 @@
 <app-navbar></app-navbar>
 
+<div *ngIf="people">
+
+  <!--HEADERS-->
+
+  <mat-list class="listHeader">
+    <div fxLayout="row">
+      <mat-list-item fxFlex="fill">
+        <p class="column-header-text" mat-line>Name</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="25%">
+        <p class="column-header-text" mat-line>Gender</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="25%">
+        <p class="column-header-text" mat-line>Height</p>
+      </mat-list-item>
+
+    </div>
+  </mat-list>
+
+  <!--HEADERS END-->
+
+  <mat-list
+    *ngFor="let person of people; let i = index"
+    [attr.data-index]="i">
+
+    <div fxLayout="row">
+      <mat-list-item fxFlex="fill">
+        <p class="desco-list-text" mat-line>{{person.name}}</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="25%">
+        <p class="desco-list-text" mat-line>{{person.gender}}</p>
+      </mat-list-item>
+
+      <mat-list-item fxFlex="25%">
+        <p class="desco-list-text" mat-line>{{person.height}}cm</p>
+      </mat-list-item>
+    </div>
+
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
+
 <img class="pageImage" src="../../assets/images/vader2.png" alt="">

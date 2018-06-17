@@ -1,11 +1,12 @@
 <mat-toolbar class="container"
              fxLayout
-             fxLayout.xs="column"
              fxLayoutAlign="start"
              fxLayoutGap="10px"
              fxLayoutGap.xs="0">
   <img id="logoImage" src="../../assets/images/starwars2.png" alt="">
-    <span fxFlex="fill"></span>
+    <span fxFlex></span>
+    <h3 id="pageName"></h3>
+    <span fxFlex></span>
 
 
   <button mat-button [matMenuTriggerFor]="menu">
@@ -13,6 +14,7 @@
   </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item (click)="openHome()">Home</button>
+    <button mat-menu-item (click)="openFilms()">Films</button>
     <button mat-menu-item (click)="openPeople()">People</button>
     <button mat-menu-item (click)="openPlanets()">Planets</button>
     <button mat-menu-item (click)="openSpecies()">Species</button>
@@ -20,3 +22,5 @@
     <button mat-menu-item (click)="openVehicles()">Vehicles</button>
   </mat-menu>
 </mat-toolbar>
+
+<!--<i class="material-icons">movie_filter</i>-->

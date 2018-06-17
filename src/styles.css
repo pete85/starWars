@@ -31,13 +31,28 @@ h3, i {
 
 #logoImage {
   margin-top: 7px;
-  max-height: 50px;
+  width: 120px;
+  max-width: 120px;
 }
 
 .pageImage {
+  opacity: 0.3;
   position: absolute;
-  left: -20px;
-  bottom: -20px;
+  left: 0;
+  bottom: 0;
   width: 300px;
   max-width: 50%;
+}
+
+.listHeader {
+  background: #A92222;
+}
+
+.mat-list, .mat-nav-list, .mat-selection-list {
+  padding-top: 0 !important;
+}
+
+.listHeader p {
+  font-weight: 800;
+  color: #FFFFFF;
 }
